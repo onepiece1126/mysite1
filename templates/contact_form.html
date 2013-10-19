@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Contact us</title>
+</head>
+<body>
+    <h1>Contact></h1>
+
+    {% if form.errors %}
+    <p style="color:red;">
+        please correct the error{{form.errors|pluralize}}below.
+    </p>
+    {% endif %}
+
+    <form action="" method="post">
+        <div class="field">
+            {{form.subject.errors}}
+            <label for="id_subject">Subject:</label>
+            {{form.subject}}
+        </div>
+        <div class="field">
+            {{form.email.errors}}
+            <label for="id_email">Your e-mail adress:</label>
+            {{form.email}}
+        </div>
+        <div class="field">
+            {{form.message.errors}}
+            <label for="id_message">Message:</label>
+            {{form.message}}
+        </div>
+        <inpuf type="submit" value="Submit">
+
+<!--         <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Submit"> -->
+    </form>
+</body>
+</html>
+
+
